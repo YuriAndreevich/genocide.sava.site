@@ -1,0 +1,45 @@
+.navbar {
+
+    width: 100%;
+    background-color: black;
+    position: fixed;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    opacity: 0.6;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+
+    &>span {
+        opacity: 1;
+
+        color: #fff;
+        font-size: 1.5rem;
+    }
+
+    &-menu {
+        font-size: 28px;
+        margin-top: 20px;
+
+        &-help {
+            opacity: 1;
+            color: #fff;
+            font-size: 1.5rem;
+            display: flex;
+            gap: 50px;
+            cursor: pointer;
+            align-items: center;
+
+
+            &-lang {
+                color:rgb(167, 167, 167);
+            }
+        }
+    }
+}
+.activeLang{
+    color:#fff;
+    align-items: center;
+}
