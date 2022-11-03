@@ -2,9 +2,9 @@ import React, { useState, useRef } from "react";
 import "./anketa.scss";
 import emailjs from "emailjs-com";
 import { useTranslation } from "react-i18next";
+import { Button, Checkbox, Input } from "@chakra-ui/react";
 
 function Anketa() {
-  const [answer, setAnswer] = useState([]);
   const anketa = [
     {
       question: "1.	Знаете ли Вы о бывших малолетних узниках нацизма?",
@@ -50,14 +50,24 @@ function Anketa() {
 
   const { t } = useTranslation();
 
+  const [toSend, setToSend] = useState('')
+  console.log(toSend)
+  const [answer, setAnswer] = useState([]);
+
+  function Change(e) {
+
+    setAnswer([...answer, toSend]);
+  }
+  console.log(answer)
+
+
   const form = useRef();
   function sendEmail(e) {
     e.preventDefault();
-
     emailjs
       .sendForm(
         "service_0bwblopdsadsa",
-        "template_9rp22kl",
+        "template_on1xj5e",
         form.current,
         "-ZOPamhh08EoPestB"
       )
@@ -71,8 +81,10 @@ function Anketa() {
       );
   }
 
-  function Change() {
-    setAnswer([...answer]);
+
+
+  const handlerChange = (data) => {
+    console.log(data)
   }
   return (
     <div style={{ padding: "10px" }}>
@@ -84,14 +96,23 @@ function Anketa() {
           также их отношения к бывшим малолетним узникам, учащиеся объединения
           «Гражданин нового века» предлагают Анкету информированности.
         </p>
-        {anketa.map((item, i) => (
-          <p id='p'>
-            {item.question}
-            <p id='p'>{item.otvet}</p>
-          </p>
-        ))}
+        <form ref={form} onSubmit={sendEmail}  >
+          {anketa.map((item, i) => (
+            <p id='p' key={i}>
+              {item.question}
+              <p id='p'>{item.otvet.map((otvet, i) =>
+                <p id='p' key={i} > <Checkbox onChange={(e) => {
+                  setToSend(otvet)
+                  Change()
+                }}>{otvet}</Checkbox></p>
+              )}</p>
+            </p>
+          ))}
+          <Button colorScheme='blackAlpha' type="submit" > {t('Отправить')}</Button>
+          <div style={{ display: 'none' }}>{answer.map((answer, i) => <Input name={`o${i}`} value={answer} />)}</div>
+        </form>
       </div>
-    </div>
+    </div >
   );
 }
 

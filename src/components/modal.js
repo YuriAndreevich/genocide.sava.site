@@ -76,14 +76,12 @@ function ModalPeople({ img, title, desc, slider }) {
               modules={[Pagination]}
               className="mySwiper"
             >
-          {console.log( slider)}
-              
-              { slider.map((img, i)=>
-              <SwiperSlide key={i}>
-              <img src={img} alt="" />
-              {console.log(img)}
-            </SwiperSlide>
-              ) }
+
+              {slider.map((img, i) =>
+                <SwiperSlide key={i}>
+                  <img src={img} alt="" />
+                </SwiperSlide>
+              )}
             </Swiper>
           </ModalBody>
         </ModalContent>
