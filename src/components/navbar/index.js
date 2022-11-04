@@ -49,7 +49,6 @@ const [activeLang, setActiveLang] = useState(2)
              
       <span className='navbar-main'><a href="#main">{t('Главная')}</a></span>
       <div className='navbar-menu-help'>
-        dfgdgf
       {play ? (
           <SVG
           className='navbar-menu-help-sound'
