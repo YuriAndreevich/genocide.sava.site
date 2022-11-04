@@ -49,6 +49,7 @@ const [activeLang, setActiveLang] = useState(2)
              
       <span className='navbar-main'><a href="#main">{t('Главная')}</a></span>
       <div className='navbar-menu-help'>
+        dfgdgf
       {play ? (
           <SVG
           className='navbar-menu-help-sound'
@@ -57,14 +58,12 @@ const [activeLang, setActiveLang] = useState(2)
             onClick={handleStartAudio}
           />
         ) : (
-          <>
           <SVG
           className='navbar-menu-help-sound'
             src={soundSVG}
             alt=""
             onClick={handleStopAudio}
           />
-          </>
         )}
         <div className='navbar-menu-help-lang'>
           <span className={activeLang === 1 &&' activeLang'} onClick={() => {changeLanguage('bel')
