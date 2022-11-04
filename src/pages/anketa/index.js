@@ -63,7 +63,6 @@ function Anketa() {
 
   const form = useRef();
   function sendEmail(e) {
-    e.preventDefault();
     emailjs
       .sendForm(
         "service_0bwblopdsadsa",
@@ -89,22 +88,20 @@ function Anketa() {
   return (
     <div style={{ padding: "10px" }}>
       <div className="anketa" id="anketa">
-        <h1 id='h1'>Анкета информированности по теме «Малолетние узники нацизма»</h1>
+        <h1 id='h1'>{t('Анкета информированности по теме «Малолетние узники нацизма»')}</h1>
 
         <p id='p'>
-          С целью определения степени информированности современной молодежи, а
-          также их отношения к бывшим малолетним узникам, учащиеся объединения
-          «Гражданин нового века» предлагают Анкету информированности.
+        {t('С целью определения степени информированности современной молодежи, а также их отношения к бывшим малолетним узникам, учащиеся объединения «Гражданин нового века» предлагают Анкету информированности.')}
         </p>
         <form ref={form} onSubmit={sendEmail}  >
           {anketa.map((item, i) => (
-            <p id='p' key={i}>
-              {item.question}
+            <p id='p' key={i}>{t(`${item.question}`)}
+              
               <p id='p'>{item.otvet.map((otvet, i) =>
                 <p id='p' key={i} > <Checkbox onChange={(e) => {
                   setToSend(otvet)
                   Change()
-                }}>{otvet}</Checkbox></p>
+                }}>{t(`${otvet}`)}</Checkbox></p>
               )}</p>
             </p>
           ))}
