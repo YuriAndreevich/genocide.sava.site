@@ -26,7 +26,9 @@ import Anketa from "./pages/anketa";
 //import Fullpage, {FullpageSection, FullpageSections} from '@ap.cx/react-fullpage'
 
 function App() {
+
   return (
+
 
     <Suspense fallback={<Spinner />}>
       <div className="App">
