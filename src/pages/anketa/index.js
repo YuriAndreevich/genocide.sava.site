@@ -51,14 +51,12 @@ function Anketa() {
   const { t } = useTranslation();
 
   const [toSend, setToSend] = useState('')
-  console.log(toSend)
   const [answer, setAnswer] = useState([]);
 
   function Change(e) {
 
     setAnswer([...answer, toSend]);
   }
-  console.log(answer)
 
 
   const form = useRef();
@@ -82,9 +80,6 @@ function Anketa() {
 
 
 
-  const handlerChange = (data) => {
-    console.log(data)
-  }
   return (
     <div style={{ padding: "10px" }}>
       <div className="anketa" id="anketa">

@@ -77,3 +77,22 @@
           }
         }
 }
+.read-more-checker2 {
+        
+  opacity: 0;
+  position: absolute;
+}
+.read-more-checker2:checked ~ .limited {
+  max-height: none;
+}
+.read-more-checker2:checked ~ .limited .bottom {
+  opacity: 0;
+  transition: 0.3s;
+
+}
+.read-more-checker2 ~ .read-more-button:before {
+  content: "Открыть »";
+}
+.read-more-checker2:checked ~ .read-more-button:before {
+  content: "Скрыть «";
+}

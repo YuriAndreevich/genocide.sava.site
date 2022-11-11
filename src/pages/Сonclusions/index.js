@@ -1,7 +1,6 @@
 import React from 'react'
 import './Сonclusions.scss'
 import { useTranslation } from 'react-i18next'
-import fon from '../../assets/img/fon.jpg'
 
 
 

@@ -9,14 +9,33 @@ import img2 from '../../assets/img/aboutWe2.jpg'
 import img3 from '../../assets/img/aboutWe3.jpg'
 import ModalComponent from "../../components/ModalComponent/ModalComponent";
 
+import { motion } from "framer-motion";
+
+
 import "./aboutWe.scss";
 
 function AboutWe() {
   const { t } = useTranslation()
 
+  const mainAnim = {
+    hidden: {
+      x: -500,
+      opacity: 0,
+    },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        ease: "easeIn",
+        duration: 1
+      }
+    },
+  };
+
   return (
-    <div data-aos="fade-up" data-aos-delay="300">
-      <div className="aboutWe" id="aboutWe">
+      <motion.div  initial="hidden"
+      variants={mainAnim}
+      whileInView="visible" className="aboutWe" id="aboutWe">
         <div className="aboutWe-content">
           <h1 id='h1'>{t('О нашей работе')}</h1>
           <p id='p'>{t('11 апреля - Международный день освобождения узников фашистских концлагерей, отмечаемый ежегодно по инициативе ООН. Среди огромного числа жертв Второй мировой войны есть особая категория лиц - бывшие малолетние и несовершеннолетние узники нацизма, угнанные на чужбину. Они были детьми, но их угоняли (часто вместе с матерями), принуждали к тяжёлой физической работе, у них забирали кровь для солдат Вермахта, ставили на них медицинские эксперименты. В самой беззаботной и радостной жизненной поре они под дулом автоматов вместе со взрослыми испытали на себе непосильный труд, голод, холод, болезни и смерть. Преступление против детства - одно из страшных деяний нацистов, которое было осуждено на Нюрнбергском процессе. Старшего поколения узников уже нет: время, к сожалению, неумолимо. А бывшие дети - сегодня пожилые, нередко больные люди, с трудной послевоенной судьбой, нуждающиеся в помощи и заботе.')}</p>
@@ -29,8 +48,7 @@ function AboutWe() {
           <img className="img2" src={img2} alt='' />
           <img className="img3" src={img3} alt='' />
         </div>
-      </div>
-    </div>
+      </motion.div>
   );
 }
 
