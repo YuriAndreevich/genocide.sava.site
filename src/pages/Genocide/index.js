@@ -1,7 +1,5 @@
 import React from "react";
 
-import "aos/dist/aos.css";
-
 import "./Genocide.scss";
 import "../readMore.scss";
 

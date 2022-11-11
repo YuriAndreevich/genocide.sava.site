@@ -18,45 +18,42 @@ import w1 from "./assets/img/waves1.svg";
 import w2 from "./assets/img/waves2.svg";
 import w4 from "./assets/img/waves4.svg";
 
-import AOS from "aos";
-import "aos/dist/aos.css";
-
 import "normalize.css";
 import "./app.scss";
 import AudioDialog from "./pages/audioDialog";
 import Anketa from "./pages/anketa";
 
+//import Fullpage, {FullpageSection, FullpageSections} from '@ap.cx/react-fullpage'
+
 function App() {
-  AOS.init();
   return (
+
     <Suspense fallback={<Spinner />}>
       <div className="App">
         <Navbar />
         <Main />
         <AboutWe />
-        <Divider wave={w1} rotate bottom='-1'/>
+        <Divider wave={w1} rotate bottom="-1" />
         <Genocid />
-        <Divider wave={w2} top='-1' />
+        <Divider wave={w2} top="-1" />
         <Prisoners />
-        <Divider wave={w1} rotate  />
+        <Divider wave={w1} rotate />
         <WeNovopolock />
-        <Divider wave={w2}  top='-1'/>
+        <Divider wave={w2} top="-1" />
         <KidFade />
         <Divider wave={w4} rotate />
-        <AudioDialog/>
-        <Divider wave={w2}  top='-1'/>
+        <AudioDialog />
+        <Divider wave={w2} top="-1" />
         <MeaninghSite />
-        <Divider wave={w1} rotate bottom='-1' />
-
+        <Divider wave={w1} rotate bottom="-1" />
         <Сonclusions />
-        <Divider wave={w2}  top='-1'/>
-
-        <Anketa/>
-
-        <Divider wave={w2} rotate bottom='-1' />
+        <Divider wave={w2} top="-1" />
+        <Anketa />
+        <Divider wave={w2} rotate bottom="-1" />
         <ContactMe />
       </div>
     </Suspense>
+
   );
 }
 
