@@ -1,7 +1,9 @@
 {
   "files": {
-    "main.css": "/static/css/main.ba679a08.css",
-    "main.js": "/static/js/main.458f59e4.js",
+    "main.js": "/static/js/main.f6bdaf68.js",
+    "static/css/640.dde89297.chunk.css": "/static/css/640.dde89297.chunk.css",
+    "static/js/640.2708acdb.chunk.js": "/static/js/640.2708acdb.chunk.js",
+    "static/js/912.28b3c51e.chunk.js": "/static/js/912.28b3c51e.chunk.js",
     "static/media/fon.mp4": "/static/media/fon.f81cd0ac71bae9cf19f8.mp4",
     "static/media/6.mp3": "/static/media/6.a7e7f2ea8be33005731f.mp3",
     "static/media/3.mp3": "/static/media/3.ac59e9a6820859209aa7.mp3",
@@ -50,16 +52,17 @@
     "static/media/prisonersBook2.jpg": "/static/media/prisonersBook2.3056f72f161a9f6dd52e.jpg",
     "static/media/book.jpg": "/static/media/book.579fbef369f50a25d177.jpg",
     "static/media/KidFade1.jpg": "/static/media/KidFade1.3247e4ec5f858141f8c5.jpg",
-    "index.html": "/index.html",
     "static/media/waves2.svg": "/static/media/waves2.637a4cd8afe7138463bd82677249022d.svg",
+    "index.html": "/index.html",
     "static/media/sound.svg": "/static/media/sound.e85eb896dfcd54b1a0e2aa915f273770.svg",
     "static/media/waves1.svg": "/static/media/waves1.a60df7d2287452560e85ce89964b3d04.svg",
     "static/media/waves4.svg": "/static/media/waves4.a60df7d2287452560e85ce89964b3d04.svg",
-    "main.ba679a08.css.map": "/static/css/main.ba679a08.css.map",
-    "main.458f59e4.js.map": "/static/js/main.458f59e4.js.map"
+    "main.f6bdaf68.js.map": "/static/js/main.f6bdaf68.js.map",
+    "640.dde89297.chunk.css.map": "/static/css/640.dde89297.chunk.css.map",
+    "640.2708acdb.chunk.js.map": "/static/js/640.2708acdb.chunk.js.map",
+    "912.28b3c51e.chunk.js.map": "/static/js/912.28b3c51e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ba679a08.css",
-    "static/js/main.458f59e4.js"
+    "static/js/main.f6bdaf68.js"
   ]
 }
