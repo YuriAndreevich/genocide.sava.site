@@ -19,7 +19,7 @@ function AboutWe() {
 
   const mainAnim = {
     hidden: {
-      x: -500,
+      x: -200,
       opacity: 0,
     },
     visible: {

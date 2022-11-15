@@ -25,3 +25,15 @@
         }
     }
 }
+@media (max-width: 640px) {
+    .contactMe{
+      padding: 0 10px 10px;
+      &-content{
+      padding: 0 10px 10px;
+
+      }
+      li {
+        font-size: 18px;
+    }
+    }
+}

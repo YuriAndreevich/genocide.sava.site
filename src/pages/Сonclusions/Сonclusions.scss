@@ -27,3 +27,16 @@ text-indent: 20px;
     }
 }
 }
+
+@media (max-width: 640px) {
+    .conclusions-content{
+      padding: 0 10px 10px;
+      li {
+        font-size: 18px;
+        padding: 0;
+    }
+     ul {
+        margin:  5px;
+    }
+}
+}
