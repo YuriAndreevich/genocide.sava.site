@@ -42,27 +42,32 @@ function Navbar() {
   };
   const [play, setPlay] = useState(true);
   const [activeLang, setActiveLang] = useState(2);
+
+  const [ColorNav, setColorNav] = useState(false)
+
+  const changeNavbar = () => {
+    if (window.scrollY >= 900) {
+      setColorNav(false);
+      console.log(ColorNav)
+      console.log(window.scrollY)
+    }
+  }
+
+  React.useEffect(() => {
+    window.addEventListener("scroll", changeNavbar);
+  }, []);
   return (
-    <div className="navbar">
+    <div className={ColorNav ? 'navbar active' : 'navbar noactive'}>
       <span className="navbar-main">
-        <a href="#main">{t("Главная")}</a>
+        <span ref={btnRef} onClick={onOpen}>
+          Меню
+        </span>
+        <a href="#main" style={{ marginLeft: '15px' }}>{t("Главная")}</a>
+
       </span>
+
       <div className="navbar-menu-help">
-        {play ? (
-          <SVG
-            className="navbar-menu-help-sound"
-            src={soundSVG}
-            alt=""
-            onClick={handleStartAudio}
-          />
-        ) : (
-          <SVG
-            className="navbar-menu-help-sound"
-            src={soundSVG}
-            alt=""
-            onClick={handleStopAudio}
-          />
-        )}
+
         <div className="navbar-menu-help-lang">
           <span
             className={activeLang === 1 && " activeLang"}
@@ -84,14 +89,26 @@ function Navbar() {
             Бел
           </span>
         </div>
-        <span ref={btnRef} onClick={onOpen}>
-          Меню
-        </span>
+        {play ? (
+          <SVG
+            className="navbar-menu-help-sound"
+            src={soundSVG}
+            alt=""
+            onClick={handleStartAudio}
+          />
+        ) : (
+          <SVG
+            className="navbar-menu-help-sound"
+            src={soundSVG}
+            alt=""
+            onClick={handleStopAudio}
+          />
+        )}
       </div>
       <>
         <Drawer
           isOpen={isOpen}
-          placement="right"
+          placement="left"
           onClose={onClose}
           finalFocusRef={btnRef}
           size="md"
@@ -130,6 +147,11 @@ function Navbar() {
                   </a>
                 </div>
                 <div>
+                  <a href="#audioDialog" onClick={onClose}>
+                    {t("Жизнь продолжается!")}
+                  </a>
+                </div>
+                <div>
                   <a href="#meaninghSite" onClick={onClose}>
                     {t("Практическая значимость сайта")}
                   </a>
@@ -139,11 +161,7 @@ function Navbar() {
                     {t("Выводы авторов")}
                   </a>
                 </div>
-                <div>
-                  <a href="#audioDialog" onClick={onClose}>
-                    {t("Жизнь продолжается!")}
-                  </a>
-                </div>
+
                 <div>
                   <a href="#anketa" onClick={onClose}>
                     {t("Анкета")}
@@ -154,6 +172,42 @@ function Navbar() {
                     {t("Обратная связь")}
                   </a>
                 </div>
+                <div className="navbar-menu-help-lang">
+                  <span
+                    className={activeLang === 1 && " activeLang black "}
+                    onClick={() => {
+                      changeLanguage("bel");
+                      setActiveLang(1);
+                    }}
+                  >
+                    Рус
+                  </span>
+                  /
+                  <span
+                    className={activeLang === 2 && " activeLang black"}
+                    onClick={() => {
+                      changeLanguage("ru");
+                      setActiveLang(2);
+                    }}
+                  >
+                    Бел
+                  </span>
+                </div>
+                {play ? (
+                  <SVG
+                    className="navbar-menu-help-sound black"
+                    src={soundSVG}
+                    alt=""
+                    onClick={handleStartAudio}
+                  />
+                ) : (
+                  <SVG
+                    className="navbar-menu-help-sound black"
+                    src={soundSVG}
+                    alt=""
+                    onClick={handleStopAudio}
+                  />
+                )}
               </div>
             </DrawerBody>
             <DrawerFooter></DrawerFooter>

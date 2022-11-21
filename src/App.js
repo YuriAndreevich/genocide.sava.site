@@ -13,6 +13,7 @@ import KidFade from "./pages/KidFade";
 import WeNovopolock from "./pages/weNovopolock";
 import AboutWe from "./pages/aboutWe";
 import Genocid from "./pages/Genocide";
+import Footer from "./components/footer";
 
 import w1 from "./assets/img/waves1.svg";
 import w2 from "./assets/img/waves2.svg";
@@ -53,6 +54,7 @@ function App() {
         <Anketa />
         <Divider wave={w2} rotate bottom="-1" />
         <ContactMe />
+        <Footer />
       </div>
     </Suspense>
 

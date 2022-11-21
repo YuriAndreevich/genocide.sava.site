@@ -77,6 +77,7 @@
           }
         }
 }
+//2
 .read-more-checker2 {
         
   opacity: 0;
@@ -90,9 +91,35 @@
   transition: 0.3s;
 
 }
-.read-more-checker2 ~ .read-more-button:before {
+.read-more-checker2 ~ .read-more-button2:before {
   content: "Открыть »";
 }
-.read-more-checker2:checked ~ .read-more-button:before {
+.read-more-checker2:checked ~ .read-more-button2:before {
   content: "Скрыть «";
+}
+.read-more-checker2 ~ .read-more-button2:before {
+  content: "Читать »";
+}
+.read-more-checker2:checked ~ .read-more-button2:before {
+  content: "Скрыть «";
+}
+.read-more-button2 {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px;
+  color: #000;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translate3d(0, -20%, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
 }

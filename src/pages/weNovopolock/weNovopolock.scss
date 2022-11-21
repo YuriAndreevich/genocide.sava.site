@@ -12,7 +12,7 @@ overflow: hidden;
     border-radius: 35px;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 30px;
+    padding: 0 30px 30px 30px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     h1{
         font-size: 48px;
@@ -24,18 +24,18 @@ overflow: hidden;
 .img1{
     position: absolute;
     transform: rotate(7deg);
-    scale: 0.3;
-    top: -521px;
-    right: -321px;
+    scale: 0.26;
+    top: -615px;
+    right: -367px;
     z-index: -1;
     box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
 }
 .img2{
     position: absolute;
     transform: rotate(355deg);
-    scale: 0.3;
-    top: -519px;
-    right: 1083px;
+    scale: 0.26;
+    top: -609px;
+    right: 1075px;
     box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
     z-index: -1;
 }

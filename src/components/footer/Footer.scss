@@ -1,0 +1,21 @@
+.footer{
+    background-color: #2C2B2B;
+    color: #fff;
+
+    &-content{
+        max-width: 1200px;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        margin: 0 auto;
+        align-items: center;
+        padding: 20px;
+        &>a>img{
+            width: 40px;
+        }
+        &>a>img:hover{
+            scale: 1.2;
+            transition: 0.3s;
+        }
+    }
+}

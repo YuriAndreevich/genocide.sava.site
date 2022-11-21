@@ -3,6 +3,8 @@ import "./anketa.scss";
 import emailjs from "emailjs-com";
 import { useTranslation } from "react-i18next";
 import { Button, Checkbox, Input } from "@chakra-ui/react";
+import { motion } from "framer-motion";
+
 
 function Anketa() {
   const anketa = [
@@ -78,20 +80,37 @@ function Anketa() {
       );
   }
 
+  const mainAnim = {
+    hidden: {
+      x: -200,
+      opacity: 0,
+    },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        ease: "easeIn",
+        duration: 1,
+      },
+    },
+  };
 
 
   return (
     <div style={{ padding: "10px" }}>
-      <div className="anketa" id="anketa">
+      <motion.div
+        initial="hidden"
+        variants={mainAnim}
+        whileInView="visible" className="anketa" id="anketa">
         <h1 id='h1'>{t('Анкета информированности по теме «Малолетние узники нацизма»')}</h1>
 
         <p id='p'>
-        {t('С целью определения степени информированности современной молодежи, а также их отношения к бывшим малолетним узникам, учащиеся объединения «Гражданин нового века» предлагают Анкету информированности.')}
+          {t('С целью определения степени информированности современной молодежи, а также их отношения к бывшим малолетним узникам, учащиеся объединения «Гражданин нового века» предлагают Анкету информированности.')}
         </p>
         <form ref={form} onSubmit={sendEmail}  >
           {anketa.map((item, i) => (
             <p id='p' key={i}>{t(`${item.question}`)}
-              
+
               <p id='p'>{item.otvet.map((otvet, i) =>
                 <p id='p' key={i} > <Checkbox onChange={(e) => {
                   setToSend(otvet)
@@ -103,7 +122,7 @@ function Anketa() {
           <Button colorScheme='blackAlpha' type="submit" > {t('Отправить')}</Button>
           <div style={{ display: 'none' }}>{answer.map((answer, i) => <Input name={`o${i}`} value={answer} />)}</div>
         </form>
-      </div>
+      </motion.div>
     </div >
   );
 }

@@ -1,17 +1,26 @@
 .navbar {
 
     width: 100%;
-    background-color: black;
+    background-color: #2C2B2B;
     position: fixed;
     z-index: 10;
     position: fixed;
     top: 0;
-    width: 100%;
-    opacity: 0.6;
     display: flex;
     justify-content: space-between;
-    padding: 30px;
+    padding: 25px;
+    align-items: center;;
+    &.active{
+        opacity: 1;
 
+    }
+    &.noactive{
+        opacity: 0.6;
+    }
+    &:hover{
+        opacity: 1;
+        transition: 0.3s;
+    }
     &>span {
         opacity: 1;
 
@@ -42,4 +51,10 @@
 .activeLang{
     color:#fff;
     align-items: center;
+}
+.black{
+    color:#000;
+    &>path{
+        fill:#000;
+    }
 }

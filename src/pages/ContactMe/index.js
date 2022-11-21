@@ -6,11 +6,27 @@ import {
     Input, Button, Textarea, useToast
 } from '@chakra-ui/react';
 import { useTranslation } from 'react-i18next'
+import { motion } from "framer-motion";
+
 
 
 
 
 function ContactMe() {
+    const mainAnim = {
+        hidden: {
+            y: 100,
+            opacity: 0,
+        },
+        visible: {
+            y: 0,
+            opacity: 1,
+            transition: {
+                ease: "easeIn",
+                duration: 1,
+            },
+        },
+    };
 
     const [text, setText] = useState('')
     const toast = useToast()
@@ -50,19 +66,20 @@ function ContactMe() {
 
     return (
         <div className='contactMe' id='contactMe'>
-            <div data-aos="fade-up" data-aos-delay="300">
 
-                <div className='contactMe-content'>
-                    <h2 id='h1'>{t('Обратная связь')}</h2>
-                    <form ref={form} onSubmit={sendEmail}  >
-                        <label>{t('Почта')}</label>
-                        <Input type="email" name="user_email" />
-                        <label>{t('Сообщение')}</label>
-                        <Textarea onChange={(e) => setText(e.target.value)} name="message" style={{ marginBottom: '10px' }} />
-                        <Button colorScheme='blackAlpha' type="submit" > {t('Отправить')}</Button>
-                    </form>
-                </div>
-            </div>
+            <motion.div
+                initial="hidden"
+                variants={mainAnim}
+                whileInView="visible" className='contactMe-content'>
+                <h2 id='h1'>{t('Обратная связь')}</h2>
+                <form ref={form} onSubmit={sendEmail}  >
+                    <label>{t('Почта')}</label>
+                    <Input type="email" name="user_email" />
+                    <label>{t('Сообщение')}</label>
+                    <Textarea onChange={(e) => setText(e.target.value)} name="message" style={{ marginBottom: '10px' }} />
+                    <Button colorScheme='blackAlpha' type="submit" > {t('Отправить')}</Button>
+                </form>
+            </motion.div>
         </div >
     )
 }
