@@ -2,6 +2,8 @@ import React from "react";
 import "./KidFade.scss";
 import { Divider, Center } from '@chakra-ui/react'
 
+import kidFadeFon from '../../assets/img/kidFadeFon.jpg'
+
 import KidFade1 from '../../assets/img/KidFade1.jpg'
 import KidFade2 from '../../assets/img/KidFade2.jpg'
 import KidFade3 from '../../assets/img/KidFade3.jpg'
