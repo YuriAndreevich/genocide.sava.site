@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  db:
+    image: mysql:5.7
+    container_name: dvgroup-db
+    volumes:
+      - dvgroup-db-data:/var/lib/mysql
+    restart: unless-stopped
+    ports:
+      - '3306:3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    networks:
+      - dvgroup-network
+
+volumes:
+  dvgroup-db-data:
+    driver: local
+
+networks:
+  dvgroup-network:
+    driver: bridge

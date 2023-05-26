@@ -1,0 +1,58 @@
+version: '3'
+
+services:
+  web:
+    image: nginx
+    container_name: dvgroup-web
+    restart: unless-stopped
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d/
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ../api:/var/www/api
+      - ../client:/var/www/client
+      - ../docs:/var/www/docs
+      - /etc/letsencrypt:/etc/letsencrypt
+    ports:
+      - 80:${NGINX_PORT}
+      - '443:443'
+    environment:
+      - NGINX_HOST=${NGINX_HOST}
+      - NGINX_PORT=${NGINX_PORT}
+    networks:
+      - dvgroup-network
+
+  backend:
+    build: ../api
+    container_name: dvgroup-api
+    restart: unless-stopped
+    volumes:
+      - ../api:/var/www/api
+      - /var/www/api/vendor
+      - ./php/local.ini:/usr/local/etc/php/conf.d/local.ini
+    working_dir: /var/www/api
+    networks:
+      - dvgroup-network
+
+  db:
+    image: mysql:5.7
+    container_name: dvgroup-db
+    volumes:
+      - dvgroup-db-data:/var/lib/mysql
+    restart: unless-stopped
+    ports:
+      - '3306:3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    networks:
+      - dvgroup-network
+
+volumes:
+  dvgroup-db-data:
+    driver: local
+
+networks:
+  dvgroup-network:
+    driver: bridge

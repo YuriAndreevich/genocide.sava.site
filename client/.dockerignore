@@ -1,0 +1,7 @@
+node_modules
+public
+.cache
+.gitignore
+.dockerignore
+Dockerfile
+Dockerfile.prod
