@@ -1,0 +1,37 @@
+.genocide {
+
+    background-color: #000;
+    opacity: 0.8;
+    color: #fff;
+    padding: 10px;
+
+    position: relative;
+    overflow: hidden;
+
+    &-content {
+        padding: 0 10px;
+        margin: 0 auto;
+        max-width: 1200px;
+    }
+
+
+
+    .img1{
+        position: absolute;
+        transform: rotate(7deg);
+        scale: 0.9;
+        top: 115px;
+        right: -331px;
+        z-index: -1;
+        box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+    }
+    .img2{
+        position: absolute;
+        transform: rotate(355deg);
+        scale: 0.4;
+        top: -228px;
+        right: 729px;
+        box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+        z-index: -1;
+    }
+}

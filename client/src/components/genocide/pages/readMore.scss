@@ -1,0 +1,125 @@
+.readMore{
+    p{color:rgb(0, 0, 0)}
+    h1{color:rgb(0, 0, 0)}
+    
+    background: #ffffff;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto ;
+    padding: 0 30px;
+    border-radius: 30px;
+    box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+    
+      }
+  
+      /* Styles for text box with more button */
+      .limited {
+        max-height: 400px;
+        overflow: hidden;
+        position: relative;
+      }
+      .limited.l-200 {
+        max-height: 200px;
+      }
+      /* Add your sizes for text box */
+      .limited.l-800 {
+        max-height: 800px;
+      }
+      .limited .readMore-bottom {
+        position: absolute;
+        bottom: 0;
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0),
+          rgba(255, 255, 255, 1) 80%
+        );
+        width: 100%;
+        height: 60px;
+        opacity: 1;
+        transition: 0.3s;
+      }
+      .read-more-checker {
+        
+        opacity: 0;
+        position: absolute;
+      }
+      .read-more-checker:checked ~ .limited {
+        max-height: none;
+      }
+      .read-more-checker:checked ~ .limited .bottom {
+        opacity: 0;
+        transition: 0.3s;
+
+      }
+      .read-more-checker ~ .read-more-button:before {
+        content: "Читать »";
+      }
+      .read-more-checker:checked ~ .read-more-button:before {
+        content: "Скрыть «";
+      }
+      .read-more-button {
+        cursor: pointer;
+        display: inline-block;
+        padding: 10px;
+        color: #000;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+
+
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translate3d(0, -20%, 0);
+          }
+          to {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+          }
+        }
+}
+//2
+.read-more-checker2 {
+        
+  opacity: 0;
+  position: absolute;
+}
+.read-more-checker2:checked ~ .limited {
+  max-height: none;
+}
+.read-more-checker2:checked ~ .limited .bottom {
+  opacity: 0;
+  transition: 0.3s;
+
+}
+.read-more-checker2 ~ .read-more-button2:before {
+  content: "Открыть »";
+}
+.read-more-checker2:checked ~ .read-more-button2:before {
+  content: "Скрыть «";
+}
+.read-more-checker2 ~ .read-more-button2:before {
+  content: "Читать »";
+}
+.read-more-checker2:checked ~ .read-more-button2:before {
+  content: "Скрыть «";
+}
+.read-more-button2 {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px;
+  color: #000;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translate3d(0, -20%, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}
