@@ -77,7 +77,7 @@ export const PostPage = () => {
     );
   }
   return (
-    <div className="m-auto container">
+    <div className="m-auto  py-20">
       <button className="flex justify-center items-center bg-gray-600 text-xs text-white rounded-sm py-2 px-4">
         <Link className="flex" to={"/news"}>
           Назад
