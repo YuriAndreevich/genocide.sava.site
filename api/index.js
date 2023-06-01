@@ -26,6 +26,10 @@ app.use(express.static('uploads'))
 app.use('/api/auth', authRoute)
 app.use('/api/posts', postRoute)
 app.use('/api/comments', commentRoute)
+app.get('/test', function (req, res) {
+    res.send('hello world');
+});
+
 
 async function start() {
     try {
