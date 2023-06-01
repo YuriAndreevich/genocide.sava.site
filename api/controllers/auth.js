@@ -77,7 +77,9 @@ export const login = async (req, res) => {
             message: 'Вы вошли в систему.',
         })
     } catch (error) {
-        res.json({ message: 'Ошибка при авторизации.', error })
+        // res.json({ message: 'Ошибка при авторизации.' })
+        res.json({ error: error.message })
+
     }
 }
 

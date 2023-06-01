@@ -12,7 +12,7 @@ const app = express()
 dotenv.config()
 
 // Constants
-const PORT = process.env.PORT || 3001
+const PORT = process.env.PORT || 3002
 const MONGODB_URI = process.env.DB_MONGO
 
 // Middleware
@@ -30,7 +30,8 @@ app.use('/api/comments', commentRoute)
 async function start() {
     try {
         await mongoose.connect(
-            'mongodb+srv://admin:l5wVsKHsbcZBI9tX@patriot.ghzx2ys.mongodb.net/?retryWrites=true&w=majority'
+            // 'mongodb+srv://admin:l5wVsKHsbcZBI9tX@patriot.ghzx2ys.mongodb.net/?retryWrites=true&w=majority'
+            process.env.MONGODB_URI
         )
 
         app.listen(PORT, () => console.log(`Server started on port: ${PORT}`))
