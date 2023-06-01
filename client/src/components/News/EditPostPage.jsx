@@ -30,7 +30,7 @@ export const EditPostPage = () => {
       updatedPost.append("id", params.id);
       updatedPost.append("image", newImage);
       dispatch(updatePost(updatedPost));
-      navigate("/news");
+      navigate("/posts");
     } catch (error) {
       console.log(error);
     }
@@ -59,7 +59,12 @@ export const EditPostPage = () => {
         />
       </label>
       <div className="flex object-cover py-2">
-        {oldImage && <img src={oldImag} alt={oldImage.name} />}
+        {oldImage && (
+          <img
+            src={`https://genocide.sava.site/api/${oldImage}`}
+            alt={oldImage.name}
+          />
+        )}
         {newImage && (
           <img src={URL.createObjectURL(newImage)} alt={newImage.name} />
         )}

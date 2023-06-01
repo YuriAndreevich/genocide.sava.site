@@ -87,16 +87,19 @@ export const PostPage = () => {
       <div className="flex  gap-10 py-8 flex flex-col items-center">
         <div className="w-2/3">
           <div className="flex flex-col basis-1/4 flex-grow">
-            {/* <div
+            <div
               className={
                 post?.imgUrl ? "flex rouded-sm h-80" : "flex rounded-sm"
               }
             >
-              {/* {post?.imgUrl && (
-                <img src={imgUrl} alt="img" className="object-cover w-full" />
-              )} 
+              {post?.imgUrl && (
+                <img
+                  src={`http://genocide.sava.site/api/${post.imgUrl}`}
+                  alt="img"
+                  className="object-cover w-full"
+                />
+              )}
             </div>
-          </div> */}
           </div>
 
           <div className="flex justify-between items-center pt-2">

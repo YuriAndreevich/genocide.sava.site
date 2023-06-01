@@ -12,13 +12,17 @@ export const PostItem = ({ post }) => {
   return (
     <Link to={`/news/${post._id}`}>
       <div className="flex flex-col basis-1/4 flex-grow">
-        {/* <div
+        <div
           className={post.imgUrl ? "flex rouded-sm h-80" : "flex rounded-sm"}
         >
           {post.imgUrl && (
-            <img src={post.oldImag} alt="img" className="object-cover w-full" />
+            <img
+              src={`http://genocide.sava.site/api/${post.imgUrl}`}
+              alt="img"
+              className="object-cover w-full"
+            />
           )}
-        </div> */}
+        </div>
         <div className="flex justify-between items-center pt-2">
           <div className="text-xs text-white opacity-50">{post.username}</div>
           <div className="text-xs text-white opacity-50"></div>

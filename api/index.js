@@ -19,7 +19,8 @@ const MONGODB_URI = process.env.DB_MONGO
 app.use(cors())
 app.use(fileUpload())
 app.use(express.json())
-app.use(express.static('uploads'))
+// app.use(express.static('uploads'))
+app.use('/api/', express.static('uploads'));
 
 // Routes
 // http://localhost:3002
