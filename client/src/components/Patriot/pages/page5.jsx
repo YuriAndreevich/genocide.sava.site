@@ -6,7 +6,8 @@ import Card from "@/components/Card";
 import "../shyne.scss";
 import data from "../../../assets/patriot/i1/data";
 import i2 from "../../../assets/patriot/i2.pdf";
-import img from "../../../assets/img/no-image.png";
+import img from "../../../assets/cards/11.png";
+import img2 from "../../../assets/cards/12.png";
 
 function page1() {
   return (
@@ -45,7 +46,7 @@ function page1() {
                 href={i2}
               >
                 <Card
-                  src={img}
+                  src={img2}
                   text="Историко-краеведческий маршрут «Поведай подвиги усатого героя»"
                 />
               </ModalComponent>

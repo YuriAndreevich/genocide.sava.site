@@ -5,7 +5,8 @@ import Card from "@/components/Card";
 import "../shyne.scss";
 import o2 from "../../../assets/patriot/o2.pdf";
 import o1 from "../../../assets/patriot/o1.pdf";
-import img from "../../../assets/img/no-image.png";
+import img from "../../../assets/cards/13.png";
+import img2 from "../../../assets/cards/14.png";
 
 function page1() {
   return (
@@ -47,7 +48,7 @@ function page1() {
                 href={o2}
               >
                 <Card
-                  src={img}
+                  src={img2}
                   text="Встреча-диалог культур «Нас познакомил Новополоцк»"
                 />
               </ModalComponent>

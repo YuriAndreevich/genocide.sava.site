@@ -7,6 +7,8 @@ import data from "../../../assets/patriot/rod1/data";
 
 import p2 from "../../../assets/patriot/p2.pdf";
 import img from "../../../assets/img/no-image.png";
+import img2 from "../../../assets/cards/9.png";
+import img3 from "../../../assets/cards/10.png";
 
 function page1() {
   return (
@@ -50,7 +52,7 @@ function page1() {
                 href={p2}
               >
                 <Card
-                  src={img}
+                  src={img2}
                   text="Турнир знатоков «Тайны полоцкой истории»"
                 />
               </ModalComponent>
@@ -59,7 +61,7 @@ function page1() {
                 href="https://drive.google.com/file/d/1uouBiIvedoGWXA7XPySB-rIHR3KRoNuO/preview"
               >
                 <Card
-                  src={img}
+                  src={img3}
                   text="Буктрейлер к роману Т.Хаткевича «Песня Двины»"
                 />
               </ModalComponent>

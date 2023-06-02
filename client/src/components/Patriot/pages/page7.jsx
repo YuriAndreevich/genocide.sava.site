@@ -4,7 +4,7 @@ import ModalComponent from "@/components/ModalComponent";
 import Card from "@/components/Card";
 import "../shyne.scss";
 import tt2 from "../../../assets/patriot/tt2.pdf";
-import img from "../../../assets/img/no-image.png";
+import img from "../../../assets/cards/15.png";
 
 function page1() {
   return (
