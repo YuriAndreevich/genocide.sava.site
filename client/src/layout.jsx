@@ -2,7 +2,6 @@ import React from "react";
 import Footer from "./components/footer";
 import Navbar from "./components/navbar";
 import useWindowSize from "./hooks/useWindowSize";
-import MNav from "./components/MobileNavigation";
 import MNav2 from "./components/RightMenu";
 
 function layout({ children }) {
@@ -13,7 +12,7 @@ function layout({ children }) {
       {screen.width > 991 ? (
         <>
           <Navbar />
-          {children}
+          <div className="py-20">{children}</div>
           <Footer />
         </>
       ) : (
