@@ -3,8 +3,8 @@ import fon from "../../../assets/video/mainvideo.mp4";
 import ModalComponent from "@/components/ModalComponent";
 import Card from "@/components/Card";
 import "../shyne.scss";
-import img from "../../../assets/img/no-image.png";
 import tt2 from "../../../assets/patriot/tt2.pdf";
+import img from "../../../assets/img/no-image.png";
 
 function page1() {
   return (
