@@ -17,7 +17,7 @@ export const MainPage = () => {
 
   if (!posts.length) {
     return (
-      <div className="text-xl text-center text-white p-20">
+      <div className="text-xl text-center text-black p-20">
         Постов не существует.
       </div>
     );

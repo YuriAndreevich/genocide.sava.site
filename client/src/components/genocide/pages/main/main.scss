@@ -1,118 +1,116 @@
+.fon-stop {
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
 
- 
- .fon-stop {
-   background: rgba(0, 0, 0, 0.5);
-   color: #f1f1f1;
-   width: 100%;
-   padding: 20px;
- }
-
- .main-p {
+.main-p {
   font-size: 3.9rem;
   color: #fff;
   position: absolute;
-  top:30%;
+  top: 30%;
   margin-left: auto;
   margin-right: auto;
   left: 0;
   right: 0;
   text-align: center;
-  
 
-   -webkit-text-stroke-width: 2px;
-   -webkit-text-stroke-color: black;
-   
- }
 
- .page1 {
-   position: relative;
-   overflow: hidden;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
 
-   &-video {
-     background-color: rgba(0, 0, 0, 0.8);
+}
 
-     height: 100vh;
-     min-width: 100%;
-     left: 50%;
-     z-index: -1;
-     object-fit: cover;
-   }
+.page1 {
+  position: relative;
+  overflow: hidden;
 
-   &-divider {
-     opacity: 0.8;
-   }
- }
+  &-video {
+    background-color: rgba(0, 0, 0, 0.8);
 
- .arrows {
-   width: 90px;
-   height: 102px;
-   left: 50%;
-   bottom: 483px;
-   margin-left: -30px;
-   position: absolute;
- }
+    height: 100%;
+    min-width: 100%;
+    left: 50%;
+    z-index: -1;
+    object-fit: cover;
+  }
 
- .arrows path {
-   stroke: #ffffff;
-   fill: transparent;
-   stroke-width: 1px;
-   animation: arrow 2s infinite;
-   -webkit-animation: arrow 2s infinite;
- }
+  &-divider {
+    opacity: 0.8;
+  }
+}
 
- @keyframes arrow {
-   0% {
-     opacity: 0
-   }
+.arrows {
+  width: 90px;
+  height: 102px;
+  left: 50%;
+  bottom: 483px;
+  margin-left: -30px;
+  position: absolute;
+}
 
-   40% {
-     opacity: 1
-   }
+.arrows path {
+  stroke: #ffffff;
+  fill: transparent;
+  stroke-width: 1px;
+  animation: arrow 2s infinite;
+  -webkit-animation: arrow 2s infinite;
+}
 
-   80% {
-     opacity: 0
-   }
+@keyframes arrow {
+  0% {
+    opacity: 0
+  }
 
-   100% {
-     opacity: 0
-   }
- }
+  40% {
+    opacity: 1
+  }
 
- @-webkit-keyframes arrow
+  80% {
+    opacity: 0
+  }
 
- /*Safari and Chrome*/
-   {
-   0% {
-     opacity: 0
-   }
+  100% {
+    opacity: 0
+  }
+}
 
-   40% {
-     opacity: 1
-   }
+@-webkit-keyframes arrow
 
-   80% {
-     opacity: 0
-   }
+/*Safari and Chrome*/
+  {
+  0% {
+    opacity: 0
+  }
 
-   100% {
-     opacity: 0
-   }
- }
+  40% {
+    opacity: 1
+  }
 
- .arrows path.a1 {
-   animation-delay: -1s;
-   -webkit-animation-delay: -1s;
-   /* Safari 和 Chrome */
- }
+  80% {
+    opacity: 0
+  }
 
- .arrows path.a2 {
-   animation-delay: -0.5s;
-   -webkit-animation-delay: -0.5s;
-   /* Safari 和 Chrome */
- }
+  100% {
+    opacity: 0
+  }
+}
 
- .arrows path.a3 {
-   animation-delay: 0s;
-   -webkit-animation-delay: 0s;
-   /* Safari 和 Chrome */
- }
+.arrows path.a1 {
+  animation-delay: -1s;
+  -webkit-animation-delay: -1s;
+  /* Safari 和 Chrome */
+}
+
+.arrows path.a2 {
+  animation-delay: -0.5s;
+  -webkit-animation-delay: -0.5s;
+  /* Safari 和 Chrome */
+}
+
+.arrows path.a3 {
+  animation-delay: 0s;
+  -webkit-animation-delay: 0s;
+  /* Safari 和 Chrome */
+}

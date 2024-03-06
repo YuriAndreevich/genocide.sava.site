@@ -12,7 +12,7 @@ function layout({ children }) {
       {screen.width > 991 ? (
         <>
           <Navbar />
-          <div className="py-20">{children}</div>
+          <div className="pt-16">{children}</div>
           <Footer />
         </>
       ) : (

@@ -21,32 +21,47 @@ function navbar() {
   };
 
   return (
-    <nav className="fixed   z-10 w-screen flex flex-wrap sm:flex-column items-center justify-center gap-10 px-2 py-5 bg-neutral-900">
-      <Link to="/" className="hover:text-green-600 hover:transition-all">
+    <nav className="fixed   z-10 w-screen flex flex-wrap sm:flex-column items-center justify-center gap-10 px-2 py-5 bg-gray-300">
+      <Link
+        to="/"
+        className="text-black hover:text-green-600 hover:transition-all"
+      >
         {t("Главная")}
       </Link>
-      <Link to="/news" className="hover:text-green-600 hover:transition-all">
+      <Link
+        to="/news"
+        className="text-black hover:text-green-600 hover:transition-all"
+      >
         {t("Новости")}
       </Link>
       <Link
         to="/genocide"
-        className="hover:text-green-600 hover:transition-all"
+        className="text-black hover:text-green-600 hover:transition-all"
       >
         {t("Незаживающие раны памяти")}
       </Link>
-      <Link to="/map" className="hover:text-green-600 hover:transition-all">
+      <Link
+        to="/map"
+        className="text-black hover:text-green-600 hover:transition-all"
+      >
         {t("Поэтическая карта")}
       </Link>
-      <Link to="/weekend" className="hover:text-green-600 hover:transition-all">
+      <Link
+        to="/weekend"
+        className="text-black hover:text-green-600 hover:transition-all"
+      >
         {t("Маршруты выходного дня")}
       </Link>
       <Link
         to="/photomuseum"
-        className="hover:text-green-600 hover:transition-all"
+        className="text-black hover:text-green-600 hover:transition-all"
       >
         {t("Фотолента музея «Беларуская хатка»")}
       </Link>
-      <Link to="/games" className="hover:text-green-600 hover:transition-all">
+      <Link
+        to="/games"
+        className="text-black hover:text-green-600 hover:transition-all"
+      >
         {t("Игры")}
       </Link>
 

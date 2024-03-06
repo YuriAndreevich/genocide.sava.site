@@ -27,23 +27,8 @@ import Anketa from "./pages/anketa";
 import Annotaion from "../Annotation";
 
 function Genocide() {
-  // useEffect(() => {
-  //   if (localStorage.getItem("showAnnotation") == "true") {
-  //     const box = document.getElementById("annotarion");
-  //     box.remove();
-  //   }
-  // }, [localStorage.getItem("showAnnotation")]);
   return (
     <div className="bg-white">
-      {localStorage.getItem("showAnnotation") == "true" ? null : (
-        <div
-          id="annotarion"
-          className="fixed z-50 h-screen w-screen overflow-x-hidden"
-        >
-          <Annotaion />
-        </div>
-      )}
-
       <Main />
       <AboutWe />
       <Divider wave={w1} rotate bottom="-1" />

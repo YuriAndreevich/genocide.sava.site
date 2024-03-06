@@ -10,7 +10,7 @@ function page1() {
   return (
     <div>
       <div className="relative ">
-        <video autoPlay muted loop className="w-screen h-screen object-cover">
+        <video autoPlay muted loop className="w-screen h-full object-cover">
           <source src={fon} type="video/mp4" />
         </video>
         <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-3/4 bg-gradient-to-r from-black to-0 w-screen h-screen top-3/4">
