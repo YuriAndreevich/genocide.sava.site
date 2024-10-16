@@ -4,18 +4,9 @@
 @tailwind utilities;
 
 /* $green: #1ca565; */
-/* Hide scrollbar for Chrome, Safari and Opera */
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
 
-/* Hide scrollbar for IE, Edge and Firefox */
-.no-scrollbar {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
 #root {
-  background-color: #fff;
+  background-color: #242424;
   min-height: 100vh;
   color: #fff;
 }

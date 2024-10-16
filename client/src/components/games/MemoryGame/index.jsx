@@ -4,7 +4,7 @@ import Button from "../../Button";
 
 function MemoryGame() {
   const BLANK_CARD =
-    "https://sotni.ru/wp-content/uploads/2023/08/znak-voprosa-na-zelenom-fone-1.webp";
+    "https://www.advgazeta.ru/upload/iblock/831/kak_pravilno_postavit_vopros_pered_ekspertom_1.jpg";
   const [imagesArray, setImagesArray] = useState([]);
   const [cardsChosen, setCardsChosen] = useState([]);
   const [cardsChosenIds, setCardsChosenIds] = useState([]);

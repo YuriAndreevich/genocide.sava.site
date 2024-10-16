@@ -48,7 +48,7 @@ function index() {
   }
 
   return (
-    <div className="sticky top-full  w-screen  bg-gray-300 text-black">
+    <div className="sticky top-full  w-screen  bg-neutral-900">
       <div className="w-2/3  justify-between p-3 m-auto items-center sm:flex flex-none gap-3">
         <div className=" flex flex-col ">
           <Link to="/" className="hover:text-green-600 hover:transition-all">
@@ -95,15 +95,11 @@ function index() {
             ref={form}
             onSubmit={sendEmail}
           >
-            <label border-solid>{t("Почта")}</label>
-            <input
-              type="email"
-              name="user_email"
-              className="text-black border-solid border-gray-400 border-2 rounded-lg"
-            />
+            <label>{t("Почта")}</label>
+            <input type="email" name="user_email" className="text-black" />
             <label>{t("Сообщение")}</label>
             <textarea
-              className="text-black border-solid border-gray-400 border-2 rounded-lg"
+              className="text-black"
               onChange={(e) => setText(e.target.value)}
               name="message"
             />
@@ -115,7 +111,7 @@ function index() {
           href="https://github.com/YuriAndreevich"
           target="_blank"
           rel="noreferrer"
-          className="flex"
+          className="лflex"
         >
           <img
             className="h-12 content-center "
