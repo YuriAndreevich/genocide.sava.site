@@ -15,7 +15,7 @@ import Page6 from "./components/Patriot/pages/page6";
 import Page7 from "./components/Patriot/pages/page7";
 import Genocide from "./components/genocide/Genocide";
 import PhotoMuseum from "./components/PhotoMuseum";
-import Weekend from "./components/weekend";
+import Weekend from "./components/Weekend";
 import Games from "./components/games";
 import { MainPage } from "./components/News/MainPage";
 import Map from "./components/map";
