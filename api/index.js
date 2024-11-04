@@ -31,6 +31,7 @@ app.get('/test', function (req, res) {
     res.send('hello world');
 });
 
+mongoose.set('strictQuery', true);
 
 async function start() {
     try {
