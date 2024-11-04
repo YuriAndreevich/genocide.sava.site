@@ -7,6 +7,7 @@ import sp from "../../assets/svg/wsoundplay.svg";
 import vm from "../../assets/svg/wvideopause.svg";
 import vp from "../../assets/svg/wvideoplay.svg";
 import { useTranslation } from "react-i18next";
+import RB80 from '../../assets/img/80_rb.png'
 import 'animate.css';
 import "./shyne.scss";
 
@@ -82,9 +83,10 @@ function index() {
       </div>
       
       <div className="absolute left-1/2 transform -translate-x-[50.1%] -translate-y-[48%] bg-gradient-to-t from-black to-0 w-screen top-3/4">
+      <img src={RB80} className='absolute'/>
 <p className="  text-4xl mt-10 text-center mb-10 absolute top-[-72%] left-1/2 w-[59%] transform -translate-x-1/2 text-center">      «Патриотизм-это фундамент современного образования»
 А.Лукашенко (Республиканский педагогический совет 27.09.2024)</p>
-<p className="  text-4xl mt-10 text-center mb-10 absolute top-[-50%] left-[20%] w-[59%] transform -translate-x-1/2 text-center animate__animated animate__fadeInUp" style={{ animationDelay: '3s' }}>80-летию освобождения Беларуси от немецко-фашистских захватчиков 80-летию Великой Победы</p>
+<p className="  text-4xl mt-10 text-center mb-10 absolute top-[-50%] left-[20%] w-[59%] transform -translate-x-1/2 text-center animate__animated animate__fadeInUp" style={{ animationDelay: '3s' }}>80-летию освобождения Беларуси от немецко-фашистских захватчиков <span>80-летию Великой Победы</span></p>
         <div className="shyne text-6xl sm:text-9xl text-center mt-20">
           <Link to="/page1" className="hover:text-green-600 font-extrabold ">
             «П
